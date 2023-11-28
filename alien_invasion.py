@@ -7,11 +7,7 @@ from ship import Ship
 import game_funstions as gf
 from pygame.sprite import Group
 
-pygame.init()
-
 FPS = 60
-
-
 
 bg_color = (230,230,230)
 
@@ -34,13 +30,7 @@ def run_game():
         gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, bullets)
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-
-            screen.fill(ai_settings.bg_color)
-            ship.blitme()
-            pygame.display.flip()
+        screen.fill(ai_settings.bg_color)
 
 run_game()
         
